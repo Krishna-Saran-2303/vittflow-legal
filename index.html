@@ -3,36 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="NvGbmtHWon5vxCZWv0_KfurxSJ5ZGNXDQuZ8zf5S-gM" />
+    <!-- PASTE YOUR GOOGLE SEARCH CONSOLE TAG BELOW -->
     <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_TAG_HERE" />
 
     <title>VittFlow - Official Homepage</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1e293b; max-width: 900px; margin: 0 auto; padding: 40px 20px; background-color: #f1f5f9; }
-        .hero { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: center; }
-        h1 { color: #2563eb; font-size: 3rem; margin-bottom: 10px; }
-        .app-name { font-weight: 900; color: #1e3a8a; }
-        .purpose-section { text-align: left; margin-top: 40px; background: #eef2ff; padding: 30px; border-radius: 15px; border-left: 5px solid #3b82f6; }
-        h2 { color: #1e3a8a; }
-        .links { margin-top: 30px; }
-        .btn { display: inline-block; background: #2563eb; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-right: 15px; }
-        .btn-alt { background: #64748b; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #0f172a; max-width: 900px; margin: 0 auto; padding: 40px 20px; background-color: #f8fafc; }
+        .hero { background: white; padding: 60px 40px; border-radius: 24px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); text-align: center; border: 1px solid #e2e8f0; }
+        h1 { color: #1e3a8a; font-size: 3.5rem; margin-bottom: 10px; font-weight: 800; letter-spacing: -0.05em; }
+        .tagline { font-size: 1.25rem; color: #64748b; margin-bottom: 40px; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin-top: 40px; }
+        .feature-item { background: #f1f5f9; padding: 20px; border-radius: 12px; border-left: 4px solid #3b82f6; }
+        .feature-item h3 { margin-top: 0; color: #1e40af; }
+        .drive-section { margin-top: 40px; background: #fff7ed; padding: 30px; border-radius: 16px; border: 1px solid #fed7aa; text-align: left; }
+        .drive-section h2 { color: #9a3412; margin-top: 0; }
+        .links { margin-top: 40px; }
+        .btn { display: inline-block; background: #2563eb; color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; margin-right: 15px; transition: background 0.2s; }
+        .btn:hover { background: #1d4ed8; }
+        .btn-alt { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+        .footer { margin-top: 60px; font-size: 0.875rem; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 20px; }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1 class="app-name">VittFlow</h1>
-        <p style="font-size: 1.2rem; color: #64748b;">The Premium Personal Finance Architect for Android</p>
+        <h1>VittFlow</h1>
+        <p class="tagline">Premium Personal Finance Architect for Android</p>
 
-        <div class="purpose-section">
-            <h2>Application Purpose & Description</h2>
-            <p><strong>VittFlow</strong> is designed to solve the problem of insecure and fragmented personal finance tracking. Our mission is to provide a 100% private, offline-first platform where users can manage their entire financial life without relying on third-party servers.</p>
-            <p>Specifically, the application provides:</p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Income & Savings</h3>
+                <p>Categorize your income streams and track your total savings balance with real-time deposit and withdrawal logs.</p>
+            </div>
+            <div class="feature-item">
+                <h3>SIP & Investments</h3>
+                <p>Manage Systematic Investment Plans with automated step-up tracking, payment logging, and growth analysis.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Financial Planner</h3>
+                <p>Build an Emergency Fund and track progress towards life goals like buying a home or planning a trip.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Wealth Analytics</h3>
+                <p>Visual charts and PDF reports to understand your net worth and monthly wealth allocation ratios.</p>
+            </div>
+        </div>
+
+        <div class="drive-section">
+            <h2>Detailed Purpose of Google Drive Access</h2>
+            <p>To ensure 100% user privacy, <strong>VittFlow</strong> does not use a central server to store your financial data. Instead, we use the <strong>Google Drive appDataFolder scope</strong>.</p>
+            <p>This allows you to create a secure, private backup of your local database. Our application only has permission to access a hidden folder that is isolated from your personal files. We use this access exclusively to:</p>
             <ul>
-                <li><strong>Local Financial Ledger</strong>: Securely log income, expenses, and savings in a local Room database.</li>
-                <li><strong>Investment Monitoring</strong>: Track SIP plans and logs with automated step-up calculations.</li>
-                <li><strong>Privacy-First Backup</strong>: We use the <strong>Google Drive appDataFolder</strong> scope to allow users to store their own encrypted backup files. This ensures that only the user can access their data, and VittFlow developers never see their raw financial records.</li>
+                <li><strong>Encrypt & Upload</strong>: Save your local financial records as an encrypted file (<code>vittflow_backup.enc</code>).</li>
+                <li><strong>Recover Data</strong>: Restore your records if you switch devices or reinstall the application.</li>
             </ul>
+            <p><em>Note: VittFlow developers have no access to your files or your raw financial data. Everything is end-to-end encrypted.</em></p>
         </div>
 
         <div class="links">
@@ -40,7 +64,10 @@
             <a href="terms.html" class="btn btn-alt">Terms of Service</a>
         </div>
 
-        <p style="margin-top: 40px; font-size: 0.9rem; color: #94a3b8;">Developed by: Krishna Saran | Contact: thethunderman2020@gmail.com</p>
+        <div class="footer">
+            <p>Developed by: Krishna Saran | Verified Owner of krishna-saran-2303.github.io</p>
+            <p>Contact: thethunderman2020@gmail.com</p>
+        </div>
     </div>
 </body>
 </html>
