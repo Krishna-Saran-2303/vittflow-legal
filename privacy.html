@@ -4,29 +4,46 @@
     <meta charset="UTF-8">
     <title>Privacy Policy - VittFlow</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.8; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; }
-        h1, h2 { color: #1e3a8a; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-        .highlight { background: #fff7ed; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
+        body { font-family: -apple-system, sans-serif; line-height: 1.8; color: #334155; max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        h1 { color: #1e3a8a; font-size: 2.5rem; margin-bottom: 20px; }
+        h2 { color: #1e40af; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 40px; }
+        .data-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        ul { padding-left: 20px; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy for VittFlow</h1>
-    <p><strong>Effective Date: July 26, 2026</strong></p>
+    <p><strong>Last Updated: July 26, 2026</strong></p>
 
-    <h2>1. Introduction</h2>
-    <p>VittFlow ("we") is committed to protecting your financial privacy. Our application is built on the principle of <span class="highlight">Local-First Storage</span>, meaning your sensitive data stays on your device.</p>
+    <p>At VittFlow, we believe that your financial history is your business alone. This policy details how our application handles your data with a strict privacy-first approach.</p>
 
-    <h2>2. Google Drive Data Access</h2>
-    <p>VittFlow requests access to your Google Drive via the <code>https://www.googleapis.com/auth/drive.appdata</code> scope. This is a restricted, hidden folder created specifically for our app.</p>
+    <h2>1. What Data We Back Up</h2>
+    <p>If you choose to use the Google Drive Backup feature, the following records from your local database are encrypted and synchronized:</p>
+    <div class="data-box">
+        <ul>
+            <li>User Settings & Profile (username, ratios, currency)</li>
+            <li>Systematic Investment Plans (SIP) & Payment Logs</li>
+            <li>Income Categories & Monthly Entries</li>
+            <li>Savings Transactions & Emergency Fund progress</li>
+            <li>Financial Goals & Contribution History</li>
+            <li>Yearly Profit/Loss Records</li>
+        </ul>
+    </div>
+
+    <h2>2. Google Drive "appDataFolder" Scope</h2>
+    <p>VittFlow requests the <code>https://www.googleapis.com/auth/drive.appdata</code> permission. This is a restricted scope that only allows the app to see the files it has created itself.</p>
     <ul>
-        <li><strong>Usage</strong>: We only use this access to store one file: <code>vittflow_backup.enc</code>.</li>
-        <li><strong>Limitation</strong>: We cannot see your photos, documents, or any other files in your personal Drive.</li>
-        <li><strong>Security</strong>: All data is encrypted with <strong>AES-256-GCM</strong> locally on your Android device before it is ever uploaded.</li>
+        <li><strong>Security</strong>: We cannot see your photos, personal documents, or emails.</li>
+        <li><strong>Encryption</strong>: All data is encrypted locally using <strong>AES-256-GCM</strong> (Authenticated Encryption) BEFORE upload.</li>
+        <li><strong>Control</strong>: You can revoke this access at any time through your Google Account settings.</li>
     </ul>
 
-    <h2>3. Data Deletion</h2>
-    <p>If you choose to delete your data, you can do so within the app settings. Revoking Google Drive access through your Google Account settings will also immediately stop all cloud synchronization.</p>
+    <h2>3. Data Ownership</h2>
+    <p>VittFlow is a <strong>server-less</strong> application. We do not have a backend database. Your data exists only in two places: your local phone memory and your personal Google Drive account. We do not sell, share, or analyze your data.</p>
 
-    <p><a href="index.html">Back to Home</a></p>
+    <h2>4. Your Responsibilities</h2>
+    <p>Users are responsible for setting a secure **Recovery Password** within the app. Because we use end-to-end encryption, the VittFlow team cannot recover your data if you lose this password.</p>
+
+    <p style="margin-top: 50px;"><a href="index.html">← Back to Homepage</a></p>
 </body>
 </html>
