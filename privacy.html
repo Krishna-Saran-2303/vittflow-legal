@@ -4,27 +4,55 @@
     <meta charset="UTF-8">
     <title>Privacy Policy - VittFlow</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.8; color: #334155; max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        h1 { color: #1e3a8a; font-size: 2.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        h2 { color: #1e40af; margin-top: 40px; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #334155; max-width: 900px; margin: 0 auto; padding: 60px 20px; background: #ffffff; }
+        h1 { color: #1e3a8a; font-size: 2.8rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 45px; font-size: 1.8rem; border-left: 5px solid #3b82f6; padding-left: 15px; }
+        .highlight-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 30px; border-radius: 12px; margin: 25px 0; }
+        p { margin-bottom: 20px; }
+        ul li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy for VittFlow</h1>
-    <p>Last Updated: July 26, 2026</p>
+    <h1>Privacy Policy</h1>
+    <p><strong>Effective Date: July 26, 2026</strong></p>
 
-    <h2>1. Data Collection</h2>
-    <p>VittFlow stores all financial data locally on your device. We do not collect or store your data on our servers.</p>
+    <p>This Privacy Policy describes how VittFlow ("we", "our", or "the Application") handles your personal and financial information. Our core philosophy is <strong>"Privacy by Design"</strong>, ensuring that users have complete ownership of their data.</p>
 
-    <h2>2. Google Drive Backup</h2>
-    <p>VittFlow uses the <code>drive.appdata</code> scope to store encrypted backups. We only access the hidden application folder. We cannot read your personal files or photos.</p>
+    <h2>1. Data Collection and Usage</h2>
+    <p>VittFlow is an offline-first application. We do not operate a central server or backend database. Your data is handled as follows:</p>
+    <ul>
+        <li><strong>Financial Records</strong>: All entries regarding income, savings, SIPs, and goals are stored exclusively in a local Room database on your Android device.</li>
+        <li><strong>Identity Information</strong>: When you use Google Sign-In, we store only your email address and display name locally to facilitate the cloud backup feature.</li>
+        <li><strong>No Third-Party Sharing</strong>: We do not sell, rent, or share your data with any third-party advertisers or data brokers.</li>
+    </ul>
 
-    <h2>3. Encryption</h2>
-    <p>Backups are encrypted using AES-256-GCM locally. Only you have the key (via your account identity or recovery password).</p>
+    <h2>2. Google Drive "appDataFolder" Access</h2>
+    <p>To provide a secure data recovery mechanism, VittFlow utilizes the <code>https://www.googleapis.com/auth/drive.appdata</code> scope. This allows the application to:</p>
+    <div class="highlight-box">
+        <ul>
+            <li>Store a single encrypted backup file (<code>vittflow_backup.enc</code>) in a hidden, isolated folder on your Google Drive.</li>
+            <li>The Application <strong>cannot</strong> access, view, or modify any other files, photos, or documents in your personal Google Drive.</li>
+            <li>Users have the absolute right to delete these backups at any time through the Application or Google Account settings.</li>
+        </ul>
+    </div>
 
-    <h2>4. Third-Party Services</h2>
-    <p>We use Google Sign-In for authentication. Their privacy policies apply to account data.</p>
+    <h2>3. Encryption Standards</h2>
+    <p>Data security is our highest priority. Before any synchronization with Google Drive occurs, your data is encrypted locally using the <strong>AES-256-GCM</strong> (Advanced Encryption Standard with Galois/Counter Mode) authenticated encryption algorithm.</p>
+    <p>The encryption key is managed by the user. If you lose your Recovery Password, the VittFlow team has no technical means of decrypting or recovering your backup.</p>
 
-    <p style="margin-top: 50px;"><a href="index.html">← Back to Home</a></p>
+    <h2>4. Data Retention and Deletion</h2>
+    <p>We retain your data only for as long as the Application is installed on your device or the backup exists in your Google Drive. You may delete all local data by clearing the app storage or uninstalling the app. Cloud backups can be deleted via the Google Drive interface or the "Sign Out" process in the app.</p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>VittFlow is not intended for use by children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>6. Changes to this Policy</h2>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+    <h2>7. Contact Information</h2>
+    <p>If you have any questions or concerns regarding your privacy, please contact our developer support at:<br>
+    <strong>Email:</strong> thethunderman2020@gmail.com</p>
+
+    <p style="margin-top: 60px;"><a href="index.html">← Back to Home</a></p>
 </body>
 </html>
